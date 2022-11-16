@@ -5,12 +5,13 @@ import DashboardCard from "@components/fragment/DashboardCard";
 import { boxShadow } from "@constant/variables";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from "chart.js";
+import TopAgents from "@components/container/dashboard/TopAgents";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
 function DashboardMainContent() {
   return (
-    <Box paddingY="20px">
+    <Box paddingY="20px" flexBasis="60%">
       <Heading as="h1" fontSize="30px" marginBottom={0}>
         Dashboard
       </Heading>
@@ -37,13 +38,21 @@ function DashboardMainContent() {
         />
       </Flex>
 
-      <Box borderRadius="12px" boxShadow={boxShadow} padding="19px 16px" marginTop="30px">
-        <Heading as="h4" fontSize="20px" marginY={0}>
-          Sales Chart
-        </Heading>
+      <Flex marginTop="30px" gap="20px">
+        <Box flexBasis="75%">
+          <Box borderRadius="12px" boxShadow={boxShadow} padding="19px 16px" height="fit-content">
+            <Heading as="h4" fontSize="20px" marginY={0}>
+              Sales Chart
+            </Heading>
 
-        <Line data={salesData} options={options} id="salesChart" />
-      </Box>
+            <Line data={salesData} options={options} id="salesChart" />
+          </Box>
+        </Box>
+
+        <Box flexBasis="25%">
+          <TopAgents />
+        </Box>
+      </Flex>
     </Box>
   );
 }

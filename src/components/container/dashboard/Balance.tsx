@@ -1,10 +1,11 @@
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { ArrowIcon } from "@components/common/icons";
+import BalanceCard from "@components/fragment/BalanceCard";
 import { klikooColor } from "@constant/variables";
 
 function DashboardBalance() {
   return (
-    <Box backgroundColor={klikooColor.secondary} width="100%">
+    <Box backgroundColor={klikooColor.secondary} width="100%" paddingX="20px" flexBasis="22%">
       <Flex marginX="auto" justifyContent="center" alignItems="center" columnGap={2} paddingY="20px">
         <Image rounded="full" src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1668608335/pretest/userpic_fnvvnb.png" height="40px" width="40px" />
         <Box>
@@ -20,6 +21,8 @@ function DashboardBalance() {
           <ArrowIcon />
         </Button>
       </Flex>
+
+      <BalanceCard />
     </Box>
   );
 }

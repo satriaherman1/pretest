@@ -55,7 +55,7 @@ function Sidebar() {
   ];
 
   return (
-    <Box>
+    <Box flexBasis="12%">
       <Box paddingY="20px">
         <Heading textAlign="center" as="h1" color="#545DFF" fontSize="29px">
           SalesDash

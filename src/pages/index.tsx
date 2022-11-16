@@ -6,7 +6,7 @@ import DashboardMainContent from "@components/container/dashboard/MainContent";
 function DashboardPage() {
   return (
     <Box className="pretest-pvg">
-      <Flex gap="50px">
+      <Flex gap="20px">
         <Sidebar />
         <DashboardMainContent />
         <DashboardBalance />
