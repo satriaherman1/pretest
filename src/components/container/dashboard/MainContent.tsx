@@ -15,7 +15,7 @@ function DashboardMainContent() {
   const [extraLargeScreen] = useMediaQuery(`(min-width: 1600px)`);
 
   return (
-    <Box marginTop={!mediumScreen ? "50px" : "0"} paddingY="20px" paddingX="20px">
+    <Box marginTop={!mediumScreen ? "50px" : "0"} paddingY="20px" paddingX="20px" height="100vh" overflowY="scroll">
       <Heading as="h1" fontSize="30px" marginBottom={0}>
         Dashboard
       </Heading>
