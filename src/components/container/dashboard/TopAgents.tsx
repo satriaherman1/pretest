@@ -1,8 +1,11 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import TopAgentsCard from "@components/fragment/TopAgentsCard";
 import { boxShadow } from "@constant/variables";
 
 function TopAgents() {
+  const [largeScreen] = useMediaQuery(`(min-width: 1024px)`);
+  const [extraLargeScreen] = useMediaQuery(`(min-width: 1600px)`);
+
   const topAgentsData = [
     {
       company: "PT Suka Maju Jakarta",
@@ -28,6 +31,12 @@ function TopAgents() {
       sales: 7230000,
       transaction: 43,
     },
+    {
+      company: "PT Suka Maju Bogor",
+      profit: 3700000,
+      sales: 7230000,
+      transaction: 43,
+    },
   ];
 
   return (
@@ -35,9 +44,9 @@ function TopAgents() {
       <Text fontWeight="bold" color="#7a7a7a">
         Top 5 Agents
       </Text>
-      <Flex flexDir="column" gap={4} marginTop="20px">
+      <Flex flexWrap="wrap" flexDir={extraLargeScreen ? "column" : largeScreen ? "row" : "column"} gap={4} marginTop="20px">
         {topAgentsData.map((data) => (
-          <TopAgentsCard key={data.company} {...data} />
+          <TopAgentsCard minW={largeScreen ? "250px" : "unset"} key={data.company} {...data} />
         ))}
       </Flex>
     </Box>

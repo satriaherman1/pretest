@@ -5,7 +5,7 @@ import { klikooColor } from "@constant/variables";
 
 function DashboardBalance() {
   return (
-    <Box backgroundColor={klikooColor.secondary} width="100%" paddingX="20px" flexBasis="22%">
+    <Box backgroundColor={klikooColor.secondary} width="100%" paddingX="20px" flexBasis="30%" minW="300px">
       <Flex marginX="auto" justifyContent="center" alignItems="center" columnGap={2} paddingY="20px">
         <Image rounded="full" src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1668608335/pretest/userpic_fnvvnb.png" height="40px" width="40px" />
         <Box>

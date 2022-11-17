@@ -3,10 +3,10 @@ import { ITopAgentsData } from "@components/fragment/TopAgents";
 import { klikooColor } from "@constant/variables";
 import FormatService from "@services/common/format.service";
 
-function TopAgentsCard({ company, profit, sales, transaction }: ITopAgentsData) {
+function TopAgentsCard({ company, profit, sales, transaction, ...props }: ITopAgentsData) {
   const formatService = new FormatService();
   return (
-    <Flex gap={3}>
+    <Flex gap={3} {...props}>
       <Image src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1668614504/pretest/userpic_1_p5crbq.png" width="35px" height="35px" />
 
       <Box w="full">
