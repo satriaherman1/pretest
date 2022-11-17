@@ -99,4 +99,4 @@ function MoreIcon({ width, height, fill, ...props }: IiconProps) {
   );
 }
 
-export { DashboardIcon, WalletIcon, TransactionIcon, ProductIcon, ChannelIcon, LogoutIcon, ArrowOutlinedIcon, ArrowIcon };
+export { DashboardIcon, WalletIcon, TransactionIcon, ProductIcon, ChannelIcon, LogoutIcon, ArrowOutlinedIcon, ArrowIcon, MoreIcon };
