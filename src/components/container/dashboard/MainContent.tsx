@@ -43,7 +43,7 @@ function DashboardMainContent() {
       </Flex>
 
       <Flex marginTop="30px" gap="20px" flexDir={extraLargeScreen ? "row" : "column"}>
-        <Box flexBasis="60%" maxW="800px">
+        <Box flexBasis="60%" maxW="850px">
           <Box borderRadius="12px" boxShadow={boxShadow} padding="19px 16px" height="fit-content">
             <Heading as="h4" fontSize="20px" marginY={0}>
               Sales Chart

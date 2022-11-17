@@ -44,9 +44,9 @@ function TopAgents() {
       <Text fontWeight="bold" color="#7a7a7a">
         Top 5 Agents
       </Text>
-      <Flex flexWrap="wrap" flexDir={extraLargeScreen ? "column" : largeScreen ? "row" : "column"} gap={4} marginTop="20px">
+      <Flex flexWrap="wrap" flexDir={extraLargeScreen ? "column" : largeScreen ? "row" : "column"} gap="12px" marginTop="20px">
         {topAgentsData.map((data) => (
-          <TopAgentsCard minW={largeScreen ? "250px" : "unset"} key={data.company} {...data} />
+          <TopAgentsCard minW={largeScreen ? "250px" : "unset"} flexBasis="32%" key={data.company} {...data} />
         ))}
       </Flex>
     </Box>
