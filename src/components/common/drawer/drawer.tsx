@@ -80,9 +80,14 @@ function Drawer(props: FlexProps) {
   ];
   return (
     <Flex {...props} position="fixed" top="0" left={0} bg="white" justifyContent="space-between" w="full" padding="12px 20px" boxShadow={isShadow ? boxShadow : "none"}>
-      <Box as="button" onClick={() => setIsOpenDrawer(true)}>
-        <HamburgerIcon />
-      </Box>
+      <Flex columnGap={3} alignItems="center">
+        <Box as="button" onClick={() => setIsOpenDrawer(true)}>
+          <HamburgerIcon />
+        </Box>
+        <Heading as="h1" color="#545DFF" fontSize="20px">
+          SalesDash
+        </Heading>
+      </Flex>
       <Box as="button" background="transparent">
         <Image rounded="full" src="https://res.cloudinary.com/dbg3ckwtz/image/upload/v1668608335/pretest/userpic_fnvvnb.png" height="40px" width="40px" />
       </Box>
